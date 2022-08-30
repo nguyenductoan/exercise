@@ -1,5 +1,5 @@
 # Dependencies
-- ruby 3.0
+- ruby 3.1.2
 - rack
 - webrick
 - rspec
