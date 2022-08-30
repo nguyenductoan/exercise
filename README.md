@@ -6,17 +6,17 @@
 
 # Setup
 
-### install bundler
+### Install bundler
 ```
 gem install bundler
 ```
 
-### install dependencies
+### Install dependencies
 ```
 bundle install
 ```
 
-### start sever
+### Start sever
 ```
 rackup
 ```
@@ -31,14 +31,14 @@ This endpoint accepts following parameters:
 - `hotels`: ids of hotel want to fetch
 - `destination`: destination id we want to fetch the hotels from
 
-## to filter by hotel ids
+## To filter by hotel ids
 
-Example: fetch hotel with id = [iJhz, SjyX]
+Example: fetch hotel with `ids = [iJhz, SjyX]`
 
 Ex: http://localhost:9292/hotels?hotels[]=iJhz&hotels[]=SjyX
 
-## to filter by hotel destination id:
+## To filter by hotel destination id:
 
-Example: fetch all hotels belong to destination id `1122`
+Example: fetch all hotels belong to `destination id = 1122`
 
 Ex: http://localhost:9292/hotels?destination=1122
