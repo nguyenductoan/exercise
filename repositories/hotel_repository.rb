@@ -28,8 +28,8 @@ class HotelRepository
     hotel_map.values
   end
 
-  def self.fetch_data_from_url(uri)
-    url = URI.parse(uri)
+  def self.fetch_data_from_url(source_url)
+    url = URI.parse(source_url)
     http = Net::HTTP.new(url.host, url.port)
     http.read_timeout = (ENV['HTTP_READ_TIMEOUT'] || 10).to_i # seconds
     http.open_timeout = (ENV['HTTP_OPEN_TIMEOUT'] || 10).to_i # seconds
@@ -38,7 +38,7 @@ class HotelRepository
     return [] unless resp.is_a?(Net::HTTPSuccess)
     JSON.parse(resp.body)
   rescue StandardError => e
-    puts "fetch data from #{uri} error: #{e}"
+    # logger error here
     []
   end
 end
