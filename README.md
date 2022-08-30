@@ -8,7 +8,7 @@
 
 ### Install bundler
 ```
-gem install bundler
+gem install bundler:2.3.12
 ```
 
 ### Install dependencies
@@ -16,12 +16,23 @@ gem install bundler
 bundle install
 ```
 
+### Configuration
+
+There are 2 configurable envs:
+- `HTTP_OPEN_TIMEOUT`: timeout to open connection to source url. default is 10s
+- `HTTP_READ_TIMEOUT`: timeout to read from source url. default is 10s
+
 ### Start sever
 ```
 rackup
 ```
 
-Defaul port is `9292`
+Default port is `9292`
+
+### Run Test
+```
+rspec
+```
 
 # Usage
 
@@ -42,3 +53,9 @@ Ex: http://localhost:9292/hotels?hotels[]=iJhz&hotels[]=SjyX
 Example: fetch all hotels belong to `destination id = 1122`
 
 Ex: http://localhost:9292/hotels?destination=1122
+
+# Demo
+
+## Heroku
+
+Checkout the demo version at: https://toan-exercise.herokuapp.com/hotels
